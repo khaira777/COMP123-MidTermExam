@@ -18,12 +18,45 @@ namespace COMP123_MidTermExam
     public abstract class LottoGame
     {
         // PRIVATE INSTANCE VARIABLES +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-        
         // CREATE private fields here --------------------------------------------
+        private List<int> _elementList;
+        private int _elementNumber;
+        private List<int> _numberList;
+        private Random _random;
+        private int _setSize;
 
         // PUBLIC PROPERTIES ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-        
         // CREATE public properties here -----------------------------------------
+        public List<int> ElementList
+        {
+            get => default;
+        }
+
+        public int ElementNumber
+        {
+            get => default;
+            set
+            {
+            }
+        }
+
+        public List<int> NumberList
+        {
+            get => default;
+        }
+
+        public Random random
+        {
+            get => default;
+        }
+
+        public int SetSize
+        {
+            get => default;
+            set
+            {
+            }
+        }
 
         // CONSTRUCTORS +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
@@ -54,11 +87,21 @@ namespace COMP123_MidTermExam
         }
 
         // PRIVATE METHODS ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-
         // CREATE the private _initialize method here -----------------------------
-
+        private void _initialize()
+        {
+            _elementList = new List<int>();
+            _numberList = new List<int>();
+            _random = new Random();
+        }
         // CREATE the private _build method here -----------------------------------
-
+        private void _build()
+        {
+            for (int i = 0; i < SetSize; i++)
+            {
+                NumberList.Add(i+1);
+            }
+        }
         // OVERRIDEN METHODS ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
         /**
@@ -87,7 +130,23 @@ namespace COMP123_MidTermExam
         }
 
         // PUBLIC METHODS +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-
         // CREATE the public PickElements method here ----------------------------
+        public void PickElements()
+        {
+            if (ElementList.Count > 0)
+            {
+                ElementList.Clear();
+                NumberList.Clear();
+                _build();
+            }
+
+            for (int i= 0; i < ElementNumber; i++)
+            {
+                int numberAt = random.Next(0, NumberList.Count);
+                ElementList.Add(NumberList[numberAt]);
+                NumberList.RemoveAt(numberAt);
+            }
+            ElementList.Sort();
+        }
     }
 }
