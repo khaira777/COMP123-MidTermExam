@@ -3,7 +3,7 @@
   <Class Name="COMP123_MidTermExam.Lotto649">
     <Position X="5.75" Y="2.25" Width="2.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Lotto649.cs</FileName>
     </TypeIdentifier>
     <Lollipop Position="0.2" />
@@ -16,15 +16,15 @@
     </TypeIdentifier>
   </Class>
   <Class Name="COMP123_MidTermExam.LottoMax">
-    <Position X="5.75" Y="3.75" Width="2.5" />
+    <Position X="5.75" Y="4" Width="2.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>LottoMax.cs</FileName>
     </TypeIdentifier>
     <Lollipop Position="0.2" />
   </Class>
   <Class Name="COMP123_MidTermExam.Program">
-    <Position X="5.75" Y="6" Width="3" />
+    <Position X="5.75" Y="5.5" Width="3" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAACAIAAAAAAAAAAAAAIAAAAAAABAAAAAA=</HashCode>
       <FileName>Program.cs</FileName>

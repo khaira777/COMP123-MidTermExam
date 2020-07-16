@@ -29,32 +29,34 @@ namespace COMP123_MidTermExam
         // CREATE public properties here -----------------------------------------
         public List<int> ElementList
         {
-            get => default;
+            get { return _elementList; }
         }
 
         public int ElementNumber
         {
-            get => default;
+            get { return _elementNumber;}
             set
             {
+                _elementNumber = value;
             }
         }
 
         public List<int> NumberList
         {
-            get => default;
+            get { return _numberList; }
         }
 
         public Random random
         {
-            get => default;
+            get { return _random; }
         }
 
         public int SetSize
         {
-            get => default;
+            get { return _setSize;}
             set
             {
+                _setSize = value;
             }
         }
 
@@ -142,9 +144,9 @@ namespace COMP123_MidTermExam
 
             for (int i= 0; i < ElementNumber; i++)
             {
-                int numberAt = random.Next(0, NumberList.Count);
-                ElementList.Add(NumberList[numberAt]);
-                NumberList.RemoveAt(numberAt);
+                int position = random.Next(0, NumberList.Count);
+                ElementList.Add(NumberList[position]);
+                NumberList.RemoveAt(position);
             }
             ElementList.Sort();
         }
