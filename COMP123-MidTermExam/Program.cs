@@ -3,7 +3,14 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-
+/*
+ *  Name: Gurkirat Singh Khaira
+ *  Student: 301112565
+ *  Comp-123
+ *  Programming-2
+ *  MidTerm Exam
+ *  Lotto Program
+ */
 namespace COMP123_MidTermExam
 {
     /**
